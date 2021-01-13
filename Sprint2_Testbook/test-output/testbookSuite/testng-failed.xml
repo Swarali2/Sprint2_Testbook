@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testbookSuite]">
+  <test thread-count="5" name="testSnapdeal(failed)">
+    <classes>
+      <class name="testRunner.testRunner1">
+        <methods>
+          <include name="run_cukes"/>
+        </methods>
+      </class> <!-- testRunner.testRunner1 -->
+    </classes>
+  </test> <!-- testSnapdeal(failed) -->
+</suite> <!-- Failed suite [testbookSuite] -->

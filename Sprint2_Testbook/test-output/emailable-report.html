@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">testbookSuite</th></tr>
+<tr><td><a href="#t0">testSnapdeal</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">152,063</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">testbookSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">testSnapdeal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testRunner.testRunner1</td><td><a href="#m0">run_cukes</a></td><td rowspan="1">1610478773363</td><td rowspan="1">151984</td></tr></tbody>
+</table>
+<h2>testSnapdeal</h2><h3 id="m0">testRunner.testRunner1#run_cukes</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><div "featureFile">Feature File: featureFile&#x2F;1Testbook_login.feature</div><br/><div "feature">Feature: Login with email</div><br/><div "scenarioOutline">Scenario Outline: Login with email</div><br/><div "scenario">Scenario Outline: Login with email</div><br/><div "result">Given  user is on testbook website (passed : 10s)</div><br/><div "result">When  User clicks on Login button (failed : 61s)</div><br/><div "result">And  user enters valid &lt;email&gt; and valid &lt;password&gt; and clicks login (skipped)</div><br/><div "result">Then  Testbook home page is displayed (skipped)</div><br/><div "scenario">Scenario Outline: Login with email</div><br/><div "result">Given  user is on testbook website (passed : 6s)</div><br/><div "result">When  User clicks on Login button (failed : 61s)</div><br/><div "result">And  user enters valid bpt0804@gmail.com and valid StepupTest@3248 and clicks login (skipped)</div><br/><div "result">Then  Testbook home page is displayed (skipped)</div><br/><div "featureFile">Feature File: featureFile&#x2F;3Testbook_logout.feature</div><br/><div "feature">Feature: Logout from testbook</div><br/><div "scenario">Scenario: Logout from Testbook</div><br/><div "result">Given  user is on testbook website (failed : 11s)</div><br/><div "result">When  User clicks on Login button (skipped)</div></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.name: notification-frame-173045c57 (tried for 60 second(s) with 500 milliseconds interval)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run_cukes(AbstractTestNGCucumberTests.java:41)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run(AbstractTestNGCucumberTests.java:47)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.name: notification-frame-173045c57 (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pages.Login.click_login(Login.java:55)
+	at stepDefinition.Login_stepDefinition.user_clicks_on_login_button(Login_stepDefinition.java:19)
+	at ✽.When User clicks on Login button(featureFile/1Testbook_login.feature:10)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;notification-frame-173045c57&apos;]&quot;}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIN49002181&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\snandgao\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57917}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3cfc046c9386d169635b2f06112fc87f
+*** Element info: {Using=name, value=notification-frame-173045c57}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at pages.Login.click_login(Login.java:55)
+	at stepDefinition.Login_stepDefinition.user_clicks_on_login_button(Login_stepDefinition.java:19)
+	at cucumber.runtime.Utils$1.call(Utils.java:35)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:12)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:35)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:38)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:289)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:45)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:116)
+	at cucumber.runtime.Runtime.run(Runtime.java:120)
+	at cucumber.runtime.Runtime.run(Runtime.java:108)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run_cukes(AbstractTestNGCucumberTests.java:38)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run(AbstractTestNGCucumberTests.java:47)
+... Removed 62 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

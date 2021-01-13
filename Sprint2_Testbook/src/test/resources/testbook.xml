@@ -1,0 +1,8 @@
+<suite name="testbookSuite">
+	<test name="testSnapdeal">
+		<classes>
+			<class name="base.Testbook_Base"/>
+			<class name="testRunner.testRunner1"/>					
+		</classes>
+	</test>	
+</suite>
